@@ -41,6 +41,8 @@ static const Rule rules[] = {
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 #include "layouts.c"
@@ -76,6 +78,8 @@ static const char *keepassxccmd[] = {"keepassxc", NULL};
 static const char *emacscmd[] = {"emacs", NULL};
 
 Autostarttag autostarttaglist[] = {
+	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
 	{.cmd = browsercmd, .tags = 1 << 0 },
 	{.cmd = keepassxccmd, .tags = 1 << 4 },
 	{.cmd = emacscmd, .tags = 1 << 7 },
