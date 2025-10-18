@@ -20,7 +20,7 @@ static const char col_cyan[]        = "#10b1fe";  // accent / highlight
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray1, col_cyan  },
+	[SchemeSel]  = { col_gray4, col_gray1, "#7a82da"  },
 };
 
 /*
